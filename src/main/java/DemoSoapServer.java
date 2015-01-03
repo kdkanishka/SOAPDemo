@@ -11,5 +11,7 @@ public class DemoSoapServer {
         String serviceAddress = "http://localhost:9099/mysoap";
         MyService implementor = new MyServiceImpl();
         Endpoint ep = Endpoint.publish(serviceAddress, implementor);
+        System.out.println("Service started..");
+        System.out.println("WSDL : " + serviceAddress+ "?wsdl");
     }
 }
